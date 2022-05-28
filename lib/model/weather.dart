@@ -1,7 +1,7 @@
 import 'package:weather/model/city.dart';
 
 class Weather {
-  int temperature = 0;
+  double temperature = 0;
   int maxTemp = 0;
   int feelsLike = 0;
   String weatherStateName = 'Loading...';
@@ -24,13 +24,14 @@ class Weather {
       required this.maxTemp,
       l});
 
+//error values
   Weather.fromJson(Map<String, dynamic> json) {
-    location = json["name"];
-    temperature = json["main"]["temp"];
-    windSpeed = json["wind"]["speed"];
-    pressure = json["main"]["pressure"];
-    humidity = json["main"]["humidity"];
-    feelsLike = json["main"]["feels_like"];
-    maxTemp = json["main"]["temp_max"];
+    location = json["name"] ?? "___";
+    temperature = json["main"]?["temp"]?.toInt() ?? 0;
+    windSpeed = json["wind"]?["speed"].toInt() ?? 0;
+    pressure = json["main"]?["pressure"].toInt() ?? 0;
+    humidity = json["main"]?["humidity"].toInt() ?? 0;
+    feelsLike = json["main"]?["feels_like"].toInt() ?? 0;
+    maxTemp = json["main"]?["temp_max"].toInt() ?? 0;
   }
 }

@@ -3,6 +3,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:weather/model/city.dart';
 import 'package:weather/model/constants.dart';
+import 'package:weather/model/weather.dart';
+import 'package:weather/services/weather_api.dart';
 import 'package:weather/ui/home.dart';
 
 class Welcome extends StatefulWidget {
@@ -13,6 +15,8 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  WeatherApiClient client = WeatherApiClient();
+  Weather? data;
   @override
   Widget build(BuildContext context) {
     List<City> cities =
@@ -26,7 +30,7 @@ class _WelcomeState extends State<Welcome> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: myconstants.secondaryColor,
-        title: Text(selectedCities.length.toString() + ' selected'),
+        title: Text('${selectedCities.length} selected'),
       ),
       body: ListView.builder(
           itemCount: cities.length,
@@ -81,9 +85,10 @@ class _WelcomeState extends State<Welcome> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: myconstants.primaryColor,
         child: const Icon(Icons.pin_drop),
-        onPressed: () {
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => const Home()));
+        onPressed: () async {
+          final newData = await client.getCurrentWeather(cities.first.city);
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => Home(data: newData)));
         },
       ),
     );
