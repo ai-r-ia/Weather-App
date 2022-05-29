@@ -11,7 +11,7 @@ class City {
       required this.isDefault});
   static List<City> citiesList = [
     City(
-      isSelected: false,
+      isSelected: true,
       city: 'Delhi',
       country: 'India',
       isDefault: true,
@@ -60,7 +60,7 @@ class City {
     ),
     City(
       isSelected: false,
-      city: 'Ansterdam',
+      city: 'Amsterdam',
       country: 'Netherlands',
       isDefault: false,
     ),

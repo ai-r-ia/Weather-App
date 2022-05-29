@@ -17,6 +17,7 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   WeatherApiClient client = WeatherApiClient();
   Weather? data;
+  List consolWeatherList = [];
   @override
   Widget build(BuildContext context) {
     List<City> cities =
@@ -86,7 +87,9 @@ class _WelcomeState extends State<Welcome> {
         backgroundColor: myconstants.primaryColor,
         child: const Icon(Icons.pin_drop),
         onPressed: () async {
-          final newData = await client.getCurrentWeather(cities.first.city);
+          print(selectedCities.first.city);
+          final newData =
+              await client.getCurrentWeather(selectedCities.first.city);
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => Home(data: newData)));
         },
