@@ -11,18 +11,20 @@ class Weather {
   DateTime currentDate = DateTime.now();
   int woeid = 20070458; // Where on Earth ID for Delhi(default city)
   String location = 'Delhi';
+  // late String description;
 
-  Weather(
-      {required this.location,
-      required this.temperature,
-      required this.windSpeed,
-      required this.humidity,
-      required this.feelsLike,
-      required this.pressure,
-      required this.currentDate,
-      required this.weatherStateName,
-      required this.maxTemp,
-      l});
+  Weather({
+    required this.location,
+    required this.temperature,
+    required this.windSpeed,
+    required this.humidity,
+    required this.feelsLike,
+    required this.pressure,
+    required this.currentDate,
+    required this.weatherStateName,
+    required this.maxTemp,
+    //  this.description = " ";
+  });
 
 //error values
   Weather.fromJson(Map<String, dynamic> json) {
@@ -33,5 +35,6 @@ class Weather {
     humidity = json["main"]?["humidity"].toInt() ?? 0;
     feelsLike = json["main"]?["feels_like"].toInt() ?? 0;
     maxTemp = json["main"]?["temp_max"].toInt() ?? 0;
+    // description = json["main"]?["description"]? "____";
   }
 }

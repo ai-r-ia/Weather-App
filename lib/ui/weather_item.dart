@@ -25,7 +25,7 @@ class weatherItem extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 8,
+          height: 6,
         ),
         Container(
           padding: const EdgeInsets.all(10.0),
