@@ -5,9 +5,9 @@ A Flutter project which fetches and displays current weather data from any city 
 The application supports navigation across three screens and fetches real time data for the selected cities.
 Below are snapshots of the application preview.
 
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102747-f3708cd8-ef91-4664-8c5c-b95a2f8bb6f2.jpeg" /> <img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102495-8a8b1fca-4177-474a-b2d0-404624c81adf.jpeg" />
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102613-29dcf9f0-b52e-4fa0-be15-60d3d4ece5fb.jpeg" />
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102630-8ff85303-fd58-45a4-a4ee-5b46d1ba4c9f.jpeg" />
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102634-bcf27876-9598-4303-a14e-f8ebfa03b8bc.jpeg" />
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102617-4dd0fb65-b0e3-444e-9748-939a7ee90355.jpeg" />
-<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102623-cdb2e260-e15f-4b15-8065-e6ca9f6b2924.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171102747-f3708cd8-ef91-4664-8c5c-b95a2f8bb6f2.jpeg" /> <img height = 400 src = "https://user-images.githubusercontent.com/87983584/171106755-644399fd-4da9-4981-a6cc-dce2a8c081f1.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171106757-75b68d1c-e92f-47db-8a12-a923af7e7c3a.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171106749-a4eeafa1-0e33-4656-a307-d564ca2fa9bb.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171107577-ba8a5395-0c9c-43ec-a306-879b73f40d6e.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171106762-0c2963fb-382c-4615-b79d-5076f427e18c.jpeg" />
+<img height = 400 src = "https://user-images.githubusercontent.com/87983584/171106782-f792c123-6fa4-4886-abad-b2d557603c3f.jpeg" />
